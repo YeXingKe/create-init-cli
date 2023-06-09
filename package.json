@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "一条命令搭建即可初始化项目，兼容pc端、移动端、uniapp、微信小程序，选择相应ui，默认创建规范文件，调试文件等",
   "main": "index.js",
+  "type": "module",
   "bin": {
     "create-template-cli": "bin/index.js"
   },
@@ -21,6 +22,8 @@
   },
   "homepage": "https://github.com/wushengzhu/create-template-cli#readme",
   "dependencies": {
+    "chalk": "^5.2.0",
+    "commander": "^10.0.1",
     "yargs": "^17.7.2"
   }
 }
