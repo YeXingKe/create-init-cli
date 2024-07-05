@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-// const chalk = require('chalk');
-import chalk from 'chalk'
+const chalk = require('chalk');// 5版本下才生效，否则报错
+// import chalk from 'chalk'
 console.log(chalk.green.bold('successful!'))
 console.log(chalk.green('hello',chalk.underline('world!')))
 

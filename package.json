@@ -1,11 +1,12 @@
 {
   "name": "create-template-cli",
-  "version": "1.0.0",
-  "description": "一条命令搭建即可初始化项目，兼容pc端、移动端、uniapp、微信小程序，选择相应ui，默认创建规范文件，调试文件等",
-  "main": "index.js",
-  "type": "module",
+  "version": "0.0.1",
+  "description": "脚手架工具可初始化项目，兼容pc端、移动端、uniapp、微信小程序，选择相应ui，默认创建规范文件，调试文件等",
+  "main": "cli.js",
   "bin": {
-    "cptc": "bin/index.js"
+    "cptc": "bin/cli.js",
+    "cptc-create": "bin/cptc-create.js",
+    "cptc-install": "bin/cptc-install.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -22,10 +23,14 @@
   },
   "homepage": "https://github.com/wushengzhu/create-template-cli#readme",
   "dependencies": {
-    "chalk": "^5.2.0",
+    "chalk": "^4.1.2",
+    "child_process": "^1.0.2",
     "commander": "^10.0.1",
-    "inquirer": "^9.2.7",
-    "ora": "^6.3.1",
+    "inquirer": "^8.2.6",
+    "ora": "^5.4.1",
     "yargs": "^17.7.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.9"
   }
 }
