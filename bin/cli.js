@@ -3,6 +3,7 @@
 // const commander = require('commander');
 const commander = require('commander');
 const pkg = require('../package.json');
+const createProject = require('../lib/create')
 
 const program = new commander.Command();
 program
@@ -11,8 +12,10 @@ program
 .version(pkg.version) // 设置了命令行工具的版本号
 
 
-program.command('create <app-name>','create a new project')
-program.command('install <dependencies...>','install dependencies')
+program.command('create <app-name>').description('创建新项目').action((projectName) => {
+    createProject(projectName)
+})
+// program.command('install <dependencies...>','install dependencies')
 
 // 处理无命令执行的情况
 if (process.argv.length === 2) {
