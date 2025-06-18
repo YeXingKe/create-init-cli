@@ -1,5 +1,5 @@
 {
-  "name": "create-template-cli",
+  "name": "create-init-cli",
   "version": "0.0.1",
   "description": "脚手架工具可初始化项目，兼容pc端、移动端、uniapp、微信小程序，选择相应ui，默认创建规范文件，调试文件等",
   "main": "cli.js",
@@ -13,20 +13,21 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wushengzhu/create-template-cli.git"
+    "url": "git+https://github.com/wushengzhu/create-init-cli.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/wushengzhu/create-template-cli/issues"
+    "url": "https://github.com/wushengzhu/create-init-cli/issues"
   },
-  "homepage": "https://github.com/wushengzhu/create-template-cli#readme",
+  "homepage": "https://github.com/wushengzhu/create-init-cli#readme",
   "dependencies": {
     "chalk": "^4.1.2",
     "child_process": "^1.0.2",
     "commander": "^10.0.1",
     "ejs": "^3.1.10",
+    "fs-extra": "^11.3.0",
     "inquirer": "^8.2.6",
     "ora": "^5.4.1",
     "yargs": "^17.7.2"

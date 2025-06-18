@@ -1,0 +1,12 @@
+{
+  "name": "vite-vue",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.3",
+    "vite": "^6.3.5"
+  }
+}

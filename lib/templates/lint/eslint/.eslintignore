@@ -1,0 +1,4 @@
+node_modules/           # 忽略整个 node_modules 目录
+dist/                   # 忽略构建输出的 dist 目录
+*.config.js             # 忽略所有以 .config.js 结尾的文件
+docs/ 
