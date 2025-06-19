@@ -13,7 +13,7 @@ const program = new commander.Command();
 
 program
   .command("create <project-name>")
-  .description("创建新项目")
+  .description("creat new project")
   .action((projectName) => {
     console.log(projectName);
     createProject(projectName);
