@@ -5,6 +5,8 @@
 /tmp
 /out-tsc
 */node_modules
+# example 
+app-demo
 # Only exists if Bazel was run
 /bazel-out
 
