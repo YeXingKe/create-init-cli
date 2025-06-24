@@ -1,11 +1,18 @@
 {
-    "angular":{
-
+    "angular": {
+        "ngUICSS": "node_modules/ng-zorro-antd/ng-zorro-antd.min.css",
+        "uiModuleContent": "import { NgModule } from '@angular/core';\nimport { NzButtonModule } from 'ng-zorro-antd/button';\n\nconst UI_MODULES = [NzButtonModule];\n\n@NgModule({\n  imports: [UI_MODULES],exports: [UI_MODULES]\n});\nexport class SharedUIModule {}"
     },
-    "vue":{
-
+    "vue": {
+        "commonAppImport": "import App from './App.vue'",
+        "commonVueImport": "import vue from '@vitejs/plugin-vue'",
+        "commonVuePlugin": "plugins: [vue()],",
+        "elementUICss": "import 'element-plus/dist/index.css';\nimport App from './App.vue';\n",
+        "buildElementAutoImport": "import vue from '@vitejs/plugin-vue';\nimport AutoImport from 'unplugin-auto-import/vite';\nimport Components from 'unplugin-vue-components/vite';\nimport { ElementPlusResolver } from 'unplugin-vue-components/resolvers'",
+        "buildElementAutoPlugin": "plugins: [vue(),AutoImport({resolvers: [ElementPlusResolver()],}),Components({resolvers: [ElementPlusResolver()]}),],",
+        "antdVUICss": "import 'ant-design-vue/dist/reset.css';\nimport App from './App.vue';\n",
+        "antdVAutoImport": "import vue from '@vitejs/plugin-vue';\nimport Components from 'unplugin-vue-components/vite';\nimport { AntDesignVueResolver } from 'unplugin-vue-components/resolvers'",
+        "antdVAutoPlugin": "plugins: [vue(),Components({resolvers: [AntDesignVueResolver({ importStyle: 'css',resolverIcons: true})]}),],"
     },
-    "react":{
-        
-    }
+    "react": {}
 }
