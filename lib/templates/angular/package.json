@@ -4,7 +4,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --stats-json",
+    "stat": "webpack-bundle-analyzer dist/stats.json",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:my-app": "node dist/my-app/server/server.mjs"
@@ -37,6 +38,7 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
     "less": "^4.2.0",
-    "typescript": "~5.8.2"
+    "typescript": "~5.8.2",
+    "webpack-bundle-analyzer": "^4.10.2"
   }
 }

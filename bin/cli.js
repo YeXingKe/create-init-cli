@@ -14,9 +14,9 @@ const program = new commander.Command();
 program
   .command("create <project-name>")
   .description("creat new project")
-  .action((projectName) => {
-    console.log(projectName);
-    createProject(projectName);
+  .option('--skip-install','skip dependences install')
+  .action((projectName,options) => {
+    createProject(projectName,options);
   });
 // program.command('install <dependencies...>','install dependencies')
 
