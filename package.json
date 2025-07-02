@@ -26,6 +26,7 @@
     "chalk": "^4.1.2",
     "child_process": "^1.0.2",
     "commander": "^10.0.1",
+    "download-git-repo": "^3.0.2",
     "fs-extra": "^11.3.0",
     "inquirer": "^8.2.6",
     "ora": "^5.4.1",

@@ -1,0 +1,25 @@
+{
+    "Vue3": {
+        "name": "Vue3(default)",
+        "repo": "https://github.com/wushengzhu/vue3-default-template.git",
+        "branch": "main",
+        "description": "Vue3项目基础模板",
+        "tags": [
+            "Vue3",
+            "Vue",
+            "Vite",
+            "ts"
+        ]
+    },
+    "React": {
+        "name": "React(default)",
+        "repo": "https://github.com/wushengzhu/react-default-template.git",
+        "branch": "main",
+        "description": "React项目基础模板",
+        "tags": [
+            "React",
+            "Vite",
+            "ts"
+        ]
+    }
+}

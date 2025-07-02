@@ -1,23 +1,49 @@
 #!/usr/bin/env node
 
 // const commander = require('commander');
-const commander = require("commander");
-const pkg = require("../package.json");
-const createProject = require("../lib/create");
+const commander = require('commander')
+const pkg = require('../package.json')
+const chalk = require('chalk')
+const createProject = require('../lib/create')
+const templates = require('../lib/templates/git-repo-temp.json')
 
-const program = new commander.Command();
+const program = new commander.Command()
+const TemplateManager = require('../lib/generators/defaultTemplate/TemplateManager')
+const TemplateSelector = require('../lib/generators/defaultTemplate/TemplateSelector')
+const TemplatePreview = require('../lib/generators/defaultTemplate/TemplatePreview')
+
 // program
 // .name(Object.keys(pkg.bin)[0]) // 设置程序的名称
 // .usage('<command> [options]') // 提示用户如何使用这个命令行工具
 // .version(pkg.version) // 设置了命令行工具的版本号
 
 program
-  .command("create <project-name>")
-  .description("creat new project")
-  .option('--skip-install','skip dependences install')
-  .action((projectName,options) => {
-    createProject(projectName,options);
-  });
+  .command('create <project-name>')
+  .description('creat new project')
+  .option('--skip-install', 'skip dependences install')
+  .action(async (projectName, options) => {
+    try {
+      // 初始化模板系统
+      const templateManager = new TemplateManager()
+      const templateSelector = new TemplateSelector(templates)
+      const templatePreview = new TemplatePreview(templateManager)
+      // 步骤1: 选择模板
+      const templateName = await templateSelector.selectTemplate()
+      if (templateName === 'custom') {
+        // 自定义模板
+        createProject(projectName, options)
+      }
+      // 步骤2: 预览模板
+      const confirmed = await templatePreview.showPreview(templateName)
+      if (!confirmed) {
+        console.log(chalk.yellow('create project canceled!'))
+        process.exit(0)
+      }
+    } catch (error) {
+      console.error(chalk.red(`\n✖ create project failed: ${error.message}\n`))
+      process.exit(1)
+    }
+  })
 // program.command('install <dependencies...>','install dependencies')
 
 // 处理无命令执行的情况
@@ -25,7 +51,7 @@ if (process.argv.length === 2) {
   // process.argv是一个数组
   // ['D:\\develop\\nvm\\nodejs\\node.exe',
   // 'D:\\develop\\nvm\\node_global\\node_modules\\create-template-cli\\bin\\index.js']
-  program.help();
+  program.help()
 }
 
-program.parse(process.argv);
+program.parse(process.argv)
