@@ -1,6 +1,7 @@
 {
-    "Vue3": {
+    "vue3-default-template": {
         "name": "Vue3(default)",
+        "fileName":"vue3-default-template",
         "repo": "https://github.com/wushengzhu/vue3-default-template.git",
         "branch": "main",
         "description": "Vue3项目基础模板",
@@ -11,8 +12,9 @@
             "ts"
         ]
     },
-    "React": {
+    "react-default-template": {
         "name": "React(default)",
+        "fileName":"react-default-template",
         "repo": "https://github.com/wushengzhu/react-default-template.git",
         "branch": "main",
         "description": "React项目基础模板",

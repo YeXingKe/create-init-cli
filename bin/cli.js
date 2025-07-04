@@ -29,7 +29,7 @@ async function executeFun(options,projectName=null){
       // 自定义模板
       createProject(projectName, options)
     }
-    // // 步骤2: 预览模板
+    // 步骤2: 预览模板
     // const confirmed = await templatePreview.showPreview(templateName)
     // if (!confirmed) {
     //   console.log(chalk.yellow('create project canceled!'))
