@@ -1,10 +1,10 @@
 <h4 align="center">脚手架（create-init-cli）</h4>
 <p align="center">
-	  <a href="https://github.com/chalk/chalk" target="_blank">
+    <a href="https://github.com/chalk/chalk" target="_blank">
     <img src="https://img.shields.io/badge/chalk-%5E4.1.2-8A2BE2">
     </a>
     <a href="" target="_blank">
-    <img src="https://img.shields.io/badge/child-_process-%5E1.0.2-8A2BE2">
+    <img src="https://img.shields.io/badge/child__process-%5E1.0.2-8A2BE2">
     </a>
     <a href="https://github.com/tj/commander.js" target="_blank">
     <img src="https://img.shields.io/badge/commander-%5E10.0.1-8A2BE2">
