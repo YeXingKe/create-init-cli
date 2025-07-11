@@ -20,8 +20,7 @@
     </a>
 </p>
 
-## 作用
-> 一个脚手架工具：创建并初始化项目，框架、语言、ui选择、规范文件等的选择，可以实现远程模板下载，可以实现缓存模板。
+一个脚手架工具：创建并初始化项目，框架、语言、ui选择、规范文件等的选择，可以实现远程模板下载，可以实现缓存模板。
 ## 环境
 > node >= 18
 ## 命令
@@ -30,7 +29,7 @@ cptc init [projectName]   # 创建命令时输入项目名可选
 cptc create <projectName> # 创建命令时必输项目名
 ```
 ## 文件
-```json
+```
 bin
  cli.js                  // 命令启动逻辑
 lib
@@ -47,8 +46,10 @@ lib
   selectConfig.js         // 交互配置
   utils.js                // 通用工具
 ```
+## 下载
+> npm i create-init-cli
 ## 本地调试
 - 在根目录执行
 > npm link
 - 在需要创建项目文件夹下执行
-> npm create app-demo
+> cptc create app-demo
